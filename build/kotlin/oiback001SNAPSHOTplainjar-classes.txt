@@ -1,0 +1,1 @@
+/Users/mac_j/oi-back/build/classes/kotlin/main/oioi/back/oiback/OioiApplication.class:/Users/mac_j/oi-back/build/classes/kotlin/main/oioi/back/oiback/OioiApplicationKt.class:/Users/mac_j/oi-back/build/classes/kotlin/main/oioi/back/oiback/controller/TestContoller.class
