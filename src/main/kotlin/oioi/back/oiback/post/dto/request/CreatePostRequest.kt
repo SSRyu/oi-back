@@ -1,4 +1,4 @@
-package oioi.back.oiback.post.dto
+package oioi.back.oiback.post.dto.request
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

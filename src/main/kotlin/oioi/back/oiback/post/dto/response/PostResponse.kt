@@ -1,4 +1,4 @@
-package oioi.back.oiback.post.dto
+package oioi.back.oiback.post.dto.response
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import java.time.LocalDateTime
