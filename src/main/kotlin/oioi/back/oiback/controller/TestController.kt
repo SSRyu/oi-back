@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class TestContoller {
-  @RequestMapping(value = ["/"], method = [RequestMethod.GET])
-  fun Index() : String = "Hello Spring boot TestContoller!"
+class TestController {
+    @RequestMapping(value = ["/"], method = [RequestMethod.GET])
+    fun index(): String = "Hello Spring boot TestController!"
 }
