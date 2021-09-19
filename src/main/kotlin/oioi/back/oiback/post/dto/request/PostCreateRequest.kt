@@ -6,7 +6,7 @@ import oioi.back.oiback.post.entities.Ingredient
 import oioi.back.oiback.post.entities.Tag
 import org.jetbrains.annotations.NotNull
 
-data class PostCreateRequest (
+data class PostCreateRequest(
     @NotNull
     @JsonProperty("title")
     val title: String,

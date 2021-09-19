@@ -11,7 +11,7 @@ import java.time.LocalDateTime
 import javax.persistence.EntityNotFoundException
 
 @Service
-class PostService (
+class PostService(
     val postRepository: PostRepository
 ) {
     fun findAll(): MutableIterable<Post> {
@@ -20,7 +20,7 @@ class PostService (
     }
 
     fun findById(postId: Long): Post {
-        return postRepository.findById(postId).orElseThrow{
+        return postRepository.findById(postId).orElseThrow {
             EntityNotFoundException("Post not found.")
         }
     }

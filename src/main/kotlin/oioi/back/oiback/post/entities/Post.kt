@@ -22,7 +22,7 @@ import javax.persistence.Table
 @Entity
 @Table(name = "post")
 @JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator::class, property = "id")
-data class Post (
+data class Post(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
