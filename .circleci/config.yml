@@ -35,4 +35,6 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle.kts" }}
 
       # run tests and lint!
-      - run: gradle check
+      - run:
+          name: check
+          command: gradle check
