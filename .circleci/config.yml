@@ -10,6 +10,11 @@ jobs:
     environment:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: oi
+      MYSQL_USER: username
+      MYSQL_PASSWORD: password
+      TZ: Asia/Tokyo
 
     steps:
       - checkout
