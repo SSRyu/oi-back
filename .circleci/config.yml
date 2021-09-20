@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  slack: circleci/slack@4.4.4
 jobs:
   build:
     docker:
@@ -38,3 +40,12 @@ jobs:
       - run:
           name: check
           command: gradle check
+
+      - slack/notify:
+          event: fail
+          mentions: '@here'
+          template: basic_fail_1
+      - slack/notify:
+          event: pass
+          mentions: '@here'
+          template: success_tagged_deploy_1
