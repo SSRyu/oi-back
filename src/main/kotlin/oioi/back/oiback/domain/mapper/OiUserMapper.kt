@@ -9,16 +9,19 @@ import org.apache.ibatis.annotations.Update
 
 @Mapper
 interface OiUserMapper {
-    @Insert("""
+    @Insert(
+        """
         INSERT INTO oi_user
             (user_id, user_password, nick_name)
         VALUES
             (#{userId}, #{userPassword}, #{nickName})
-    """)
+    """
+    )
     @Options(useGeneratedKeys = true, keyProperty = "id")
     fun insert(oiUser: OiUser)
 
-    @Select("""
+    @Select(
+        """
         SELECT
             id, 
             user_id as userId, 
@@ -30,10 +33,12 @@ interface OiUserMapper {
             oi_user
         WHERE
             id = #{id}
-    """)
+    """
+    )
     fun select(id: Int): OiUser
 
-    @Update("""
+    @Update(
+        """
         UPDATE oi_user
         SET
             user_id = #{userId},
@@ -42,6 +47,7 @@ interface OiUserMapper {
         WHERE
             id = #{id};
 
-    """)
+    """
+    )
     fun update(oiUser: OiUser)
 }
