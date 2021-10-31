@@ -1,0 +1,9 @@
+CREATE TABLE oi_user (
+    id              BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    user_id         VARCHAR(100) NOT NULL,
+    user_password   VARCHAR(100) NOT NULL,
+    nick_name       VARCHAR(100) NOT NULL,
+    created_at      DATETIME(3) DEFAULT CURRENT_TIMESTAMP (3) NOT NULL,
+    updated_at      DATETIME(3) DEFAULT CURRENT_TIMESTAMP (3) ON UPDATE CURRENT_TIMESTAMP (3) NOT NULL,
+    PRIMARY KEY(id)
+);
