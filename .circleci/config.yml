@@ -36,6 +36,11 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle.kts" }}
 
+      # db migration
+      - run:
+          name: migrate
+          command: gradle flywayMigrate
+
       # run tests and lint!
       - run:
           name: check
