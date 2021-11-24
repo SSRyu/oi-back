@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class TestController {
+    val helloMessage: String = "Hello Spring boot TestController!"
+
     @RequestMapping(value = ["/"], method = [RequestMethod.GET])
-    fun index(): String = "Hello Spring boot TestController!"
+    fun index(): String = helloMessage
 }
