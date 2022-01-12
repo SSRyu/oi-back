@@ -32,6 +32,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0")
+    implementation("io.springfox:springfox-boot-starter:3.0.0")
     compileOnly("org.projectlombok:lombok")
     runtimeOnly("mysql:mysql-connector-java")
     annotationProcessor("org.projectlombok:lombok")
@@ -54,6 +55,11 @@ flyway {
     url = "jdbc:mysql://localhost:3306/oi?&allowPublicKeyRetrieval=true&useSSL=false"
     user = "username"
     password = "password"
+}
+
+configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+    verbose.set(true)
+    disabledRules.set(setOf("indent"))
 }
 
 detekt {
