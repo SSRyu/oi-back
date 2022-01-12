@@ -57,6 +57,11 @@ flyway {
     password = "password"
 }
 
+configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+    verbose.set(true)
+    disabledRules.set(setOf("indent"))
+}
+
 detekt {
     buildUponDefaultConfig = true // preconfigure defaults
     allRules = false // activate all available (even unstable) rules.
